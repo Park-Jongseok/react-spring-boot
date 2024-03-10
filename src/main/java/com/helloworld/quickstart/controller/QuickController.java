@@ -1,5 +1,7 @@
 package com.helloworld.quickstart.controller;
 
+import com.helloworld.quickstart.dto.ItemDto;
+import com.helloworld.quickstart.dto.ResponseDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,8 +33,10 @@ public class QuickController {
 	}
 
 	@PostMapping("/item")
-	public String registerItem(@RequestBody String item) {
+	public ResponseDto registerItem(@RequestBody ItemDto item) {
 		log.info("item : {}", item);
-		return "ok";
+		ResponseDto responseDto = new ResponseDto();
+		responseDto.setMessage("ok");
+		return responseDto;
 	}
 }
