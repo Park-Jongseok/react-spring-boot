@@ -1,10 +1,7 @@
 package com.helloworld.quickstart.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Slf4j
@@ -30,6 +27,12 @@ public class QuickController {
 	@GetMapping("/company/{id}")
 	public String getCompany(@PathVariable("id") String id) {
 		log.info("empNo : {}", id);
+		return "ok";
+	}
+
+	@PostMapping("/item")
+	public String registerItem(@RequestBody String item) {
+		log.info("item : {}", item);
 		return "ok";
 	}
 }
