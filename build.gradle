@@ -23,6 +23,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation group: 'com.h2database', name: 'h2', version: '2.2.224'
+    implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '3.0.3'
 }
 
 tasks.named('test') {

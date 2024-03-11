@@ -10,3 +10,6 @@ spring:
       username: sa
       password:
 
+mybatis:
+  mapper-locations:
+    - mappers/*.xml
